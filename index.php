@@ -11,13 +11,10 @@
 
 <body>
     <div class="contenedor">
-
         <div class="navbar">
-
             <div class="logo">
                 <img src="imagenes/logo.jpg" alt="">
             </div>
-
             <nav>
                 <ul>
                     <li><a href="">Inicio</a></li>
