@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.contenedor{
+    width: 100%;
+    margin: auto;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: greenyellow;
+}
+
+.logo img{
+    width: 120px;
+    height: 80px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+p{
+    color: #555;
+}
+
+.fondo{
+    background-image: url("../imagenes/logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 300px 0px;
+    width: 100%;
+}
+
+.texto-fondo{
+    color: honeydew;
+}
+
+footer{
+    background-color:greenyellow;
+}

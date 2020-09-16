@@ -1,0 +1,48 @@
+.contenedor{
+    width: 100%;
+   
+}
+
+.titulo{
+    width: 100%;
+
+}
+
+.titulo h1{
+    text-align: center; 
+}
+
+.formulario-productos{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.formulario{
+    width: 100%;
+    background-color: lightseagreen;
+    padding: 0px 10px;
+    
+}
+
+.label-form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0px ;
+}
+
+.input-producto{
+    padding: 10px 0px;
+}
+
+.btn-guardar{
+    width: 60%;
+    color: #ffffff;
+    background-color: mediumblue;
+    padding: 10px 0px;
+    padding-bottom: 10px;
+    
+}
+
