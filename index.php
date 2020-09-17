@@ -21,7 +21,7 @@
                     <li><a href="">Productos</a></li>
                     <li><a href="">Quienes Somos</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="tienda/login.html"><i class="fas fa-user" ></i></a></li>
+                    <li><a href="controller/LoginController.php?action=login"><i class="fas fa-user" ></i></a></li>
                     <li><a href=""><i class="fas fa-cart-plus"></i></a></li>
 
                 </ul>
