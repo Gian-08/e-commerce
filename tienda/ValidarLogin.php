@@ -16,9 +16,10 @@
 
     header("Location:../tienda/producto.php");
 
-   $infoUsuario = $loginUsuario->FETCH(PDO::FETCH_ASSOC);
+   /*$infoUsuario = $loginUsuario->FETCH(PDO::FETCH_ASSOC);
    session_start();
    $_SESSION['nombre'] = $infoUsuario['nombre'];
+   */
     
 ?>
 

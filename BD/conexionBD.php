@@ -1,28 +1,23 @@
 <?php
     class Conexion
     {
-        public $db;
-    
-        public function conectar()
-        {
             //Datos que me permiten ingresar la informacion a mi instancia PDO
-            $host = "localhost";
-            $dbname = "neonledstore";
-            $username = "root";
-            $password = "";
-            try {
-                $this->db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-            } catch (PDOException $th) {
-                echo "Error: " . $th->getMessage();
-            }
-            
-        }
-        //Funcion que me permite cerrar una conexion cuando yo quiera =)
-        public function CloseConexion()
-        {
-            $this->db = null;
-        }
+          private $host = "localhost";
+          private $dbname = "neonledstore";
+          private $username = "root";
+          private $password = "";
+          private $db;
 
-    
+          public function __construct()
+          {
+            $conexion = "mysql:host".$this->host. ";dbname=".$this->dbname.";charset=utf8";
+            try {
+                $this->db = new PDO($conexion, $this->username, $this->password);
+                $this->db->setAttribute(PDO:: ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (Exception $e) {
+                $this->db= 'Error de conexion';
+                echo "Error:".$e->getMessage();
+            }
+          }
     }
 ?>

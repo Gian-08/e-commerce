@@ -16,9 +16,9 @@
             <h1>Registro de productos</h1>
         </div>
         <div class="formulario-productos">
-            <form class="formulario" action="" method="post" enctype="multipart/form-data" >
+            <form class="formulario" action="ValidarProducto.php" method="post" enctype="multipart/form-data" >
                 <label class="label-form" >Nombre del producto:</label>
-                <input type="text " name="nom_producto">
+                <input type="text " name="nombre">
                 <label class="label-form" >Precio:</label>
                 <input type="double" name="precio" >
                 <label class="label-form" >Categoria:</label>
@@ -41,9 +41,9 @@
                     <option value="Cintas ">Cintas</option>
                 </select>
                 <label class="label-form" >Descripcion:</label>
-                <textarea name="" id="" cols="25" rows="4"></textarea>
+                <textarea name="descripcion" id="" cols="25" rows="4"></textarea>
                 <label class="label-form" >Imagen:</label>
-                <input class="input-producto"  type="file" name="foto" id="" accept=".webp" multiple >
+                <input class="input-producto"  type="file" name="imagen" id="" accept=".webp" multiple >
 
                 <input class="btn-guardar" type="submit" value="Guardar producto" >
 

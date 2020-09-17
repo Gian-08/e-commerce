@@ -1,23 +1,32 @@
 <?php
-    include '../BD/conexionBD.php';
 
-   if(isset($POST['ingresar']))
+require_once("autoload.php");
+
+class Productos extends Conexion{
+
+    private $nombre;
+    private $precio;
+    private $categoria;
+    private $descripcion;
+    private $imagen;
+    private $conexion;
+
+    public function __construct()
     {
-        $email = $_POST['email'];
-        $clave = $_POST['clave'];
-
-        $loginUsuario=$db->prepare("SELECT * FROM usuarios WHERE email =: email AND clave=: clave");
-        $loginUsuario->bindParam("email" , $email, PDO::PARAM_STR);
-        $loginUsuario->bindParam("clave" , $clave, PDO::PARAM_STR);
-        $loginUsuario->execute();
-
-        
+        $this->conexion = new Conexion();
     }
 
-    header("Location:../tienda/producto.php");
+    public function insertarProducto(string $nombre, double $precio, string $categoria ,string $descripcion, string $imagen)
+    {
+        $this->nombre = $nombre;
+        $this->precio = $precio;
+        $this->categoria = $categoria;
+        $this->descripcion = $descripcion;
+        $this->imagen = $imagen;
 
-   $infoUsuario = $loginUsuario->FETCH(PDO::FETCH_ASSOC);
-   session_start();
-   $_SESSION['nombre'] = $infoUsuario['nombre'];
+    }
+}
+
+
     
 ?>
