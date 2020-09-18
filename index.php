@@ -18,7 +18,7 @@
             <nav>
                 <ul>
                     <li><a href="">Inicio</a></li>
-                    <li><a href="">Productos</a></li>
+                    <li><a href="tienda/coleccion.php">Tienda</a></li>
                     <li><a href="">Quienes Somos</a></li>
                     <li><a href="">Contacto</a></li>
                     <li><a href="tienda/login.html"><i class="fas fa-user" ></i></a></li>

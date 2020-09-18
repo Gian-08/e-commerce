@@ -16,7 +16,7 @@ class Productos extends Conexion{
         $this->conexion = new Conexion();
     }
 
-    public function insertarProducto(string $nombre, double $precio, string $categoria ,string $descripcion, string $imagen)
+    public function insertarProducto(string $nombre, double $precio, string $categoria, string $descripcion, string $imagen)
     {
         $this->nombre = $nombre;
         $this->precio = $precio;
