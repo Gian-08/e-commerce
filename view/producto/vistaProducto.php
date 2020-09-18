@@ -9,6 +9,7 @@
 <body>
     <h1>Lista de Productos</h1>
     <?php if(!empty($_SESSION['email'])) : ?>
+        <a href="http://localhost/e-commerce/controller/ProductoController.php?action=insertar">Insertar Producto</a><br>
         <a href="http://localhost/e-commerce/controller/LoginController.php?action=logout">Cerrar Sesion</a>
     <?php endif?>    
     <div class="container">
