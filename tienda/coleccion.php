@@ -10,59 +10,48 @@
 </head>
 
 <body>
+
+    <h1>Lista de Productos</h1>
+    <?php if(!empty($_SESSION['email'])) : ?>
+        <a href="http://localhost/e-commerce/controller/ProductoController.php?action=insertar">Insertar Producto</a><br>
+        <a href="http://localhost/e-commerce/controller/LoginController.php?action=logout">Cerrar Sesion</a>
+    <?php endif?>
+
     <div class="container">
+        <?php foreach ($objProducto as $producto) { ?>
         <section class="cards">
             <div class="card">
+            <input type="hidden" value="<?php $producto->IdProducto; ?>">
                 <div class="card-img">
-                    <img src="//cdn.shopify.com/s/files/1/1950/0655/products/nyc_1024x1024.jpg?v=1538726243" alt="">
+                    <img src="<?php echo $producto->imagen; ?>" alt="">
                 </div>
                 <div class="card-body">
                     <div class="card-body-content">
-                        <span>NEONSKILTET</span>
-                        <h3>New York Skyline</h3>
-                        <strong>10.000.00 soles</strong>
+                        <span><?php echo $producto->nombre ?></span>
+                        <h3><?php echo $producto->categoria ?></h3>
+                        <strong><?php echo "s/." . $producto->precio ?>.00 soles</strong>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://eloutput.com/app/uploads-eloutput.com/2019/03/sonic-real-imagen-pelicula.jpg" alt="">
-                </div>
-                <div class="card-body">
-                    <div class="card-body-content">
-                        <span>NEONSKILTET</span>
-                        <h3>New York Skyline</h3>
-                        <strong>10.000.00 soles</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://ichef.bbci.co.uk/news/410/cpsprodpb/113AC/production/_113427507_solar_orbiter_eui-fullsun01.jpg" alt="">
-                </div>
-                <div class="card-body">
-                    <div class="card-body-content">
-                        <span>NEONSKILTET</span>
-                        <h3>New York Skyline</h3>
-                        <strong>10.000.00 soles</strong>
-                    </div>
-                </div>
-            </div>
+            
         </section>
+        <?php } ?>
     </div>
 
     <div class="screen-modal">
+        <?php foreach ($objProducto as $producto) { ?>
         <div class="modal">
             <div class="modal-img">
-                <img src="https://ichef.bbci.co.uk/news/410/cpsprodpb/113AC/production/_113427507_solar_orbiter_eui-fullsun01.jpg" alt="">
+                <img src="<?php echo $producto->imagen; ?>" alt="">
             </div>
             <div class="modal-head">
                 <form class="form" id="compraForm" action="">
-                    <span>EL SEÑAL DE NEÓN</span>
+                    <span><?php echo strtoupper($producto->categoria) ?></span>
+                    
                     <a href="#">
-                        <h3>Horizonte de nueva york</h3>
+                    <h3><?php echo $producto->nombre ?></h3>
                     </a>
-                    <strong>12.000,00 kr</strong>
+                    <strong><?php echo "s/." . $producto->precio ?>.00 soles</strong>
                     <hr>
                     <div class="form-group">
                         <label for="cantidad">Cantidad</label>
@@ -72,9 +61,14 @@
                         <button class="button" type="submit">AÑADIR AL CARRITO</button>
                     </div>
                     <hr>
-                    <p>descripcion Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi a nihil consequuntur voluptatibus officia sed deserunt provident!</p>
+                    <p><?php echo $producto->descripcion ?></p>
                 </form>
             </div>
+            <div class="img-group">
+                    <img src="<?php echo $producto->imagen1; ?>" alt="" width="100px" height="100px">
+                    <img src="<?php echo $producto->imagen2; ?>" alt="" width="100px" height="100px">
+                    <img src="<?php echo $producto->imagen3; ?>" alt="" width="100px" height="100px">
+                </div>
             <div class="modal-desc">
                 <h4>Especificaciones</h4>
                 <table class="table" q>
@@ -95,11 +89,13 @@
                         </tr>
                     </tbody>
                 </table>
+                <a href="?action=actualizar&IdProducto=<?php echo $producto->IdProducto?>" style="color: blue;">Editar Producto</a>
+                <a href="?action=eliminar&IdProducto=<?php echo $producto->IdProducto; ?>&imagen=<?php echo $producto->imagen?>" style="color: red;" >Eliminar</a>
                 <a href="#">VISITE LA PÁGINA DEL PRODUCTO</a>
             </div>
         </div>
+        <?php } ?>
     </div>
     </div>
 </body>
-
 </html>
