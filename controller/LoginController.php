@@ -1,5 +1,4 @@
 <?php
-
 require '../model/LoginModel.php';
 require 'StarterController.php';
 $ics = new StarterController();

@@ -1,21 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   margin: 0px;
   padding: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 :root {
   --PlomoSuave: #787878;
-  --NaranjaRojizo: #f64c3f;
+  --NaranjaRojizo: rgba(246, 76, 63, 1);
   --FondoModal: rgba(44, 38, 38, 0.6);
   --NegroDeLetras: #222222;
 }
 body {
   position: relative;
+  background-image: linear-gradient(
+    93deg,
+    rgba(240, 242, 240, 0.1) 74%,
+    var(--NaranjaRojizo) 89%
+  );
+  background-size: cover;
 }
 .container {
+  height: 100%;
   width: 100%;
 }
-
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+}
+.header h1 {
+  color: var(--NaranjaRojizo);
+  font-size: 65px;
+}
+.header-options {
+  width: 50%;
+  margin: auto;
+  min-width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.header-options a {
+  display: block;
+  width: 250px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  background-color: var(--NaranjaRojizo);
+  border: 1px solid white;
+}
+.header-options a:hover {
+  color: var(--NaranjaRojizo);
+  background-color: white;
+  border: 1px solid var(--NaranjaRojizo);
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -130,9 +172,14 @@ body {
 }
 .modal-img {
   width: 48%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .modal-img img {
-  width: 100%;
+  width: 350px;
+  height: 350px;
 }
 .modal-head {
   width: 48%;
@@ -235,10 +282,12 @@ td {
   .modal-img {
     width: 100%;
   }
-  .modal-img img {
-    width: 100%;
-  }
   .modal-head {
     width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .modal{
+    max-width: 80%;
   }
 }
