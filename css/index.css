@@ -34,22 +34,22 @@ body {
   list-style: none;
 }
 .nav-list li {
-  padding: 10px 20px;
   animation-name: bordesNav;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 .nav-list li:hover {
-  padding: 10px 20px;
   border: 2px solid white;
   box-shadow: 2px 2px 15px gray;
   animation: none;
 }
 .nav-list li a {
+  padding: 10px 20px;
   color: white;
   display: block;
   width: 100%;
+  height: 100%;
   font-size: 18px;
   text-decoration: none;
 }
