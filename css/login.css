@@ -6,8 +6,8 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --letraColor: rgba(38, 162, 188, 1);
-  --bordersColor: rgb(27, 139, 161);
+  --letraColor: rgba(38, 65, 188,1);
+  --bordersColor: rgba(27, 52, 161,1);
 }
 body {
   background-image: linear-gradient(
