@@ -11,10 +11,11 @@
 
 <body>
     <div class="contenedor">
-        <div class="navbar">
-            <div class="logo">
+        <nav class="nav">
+            <div class="nav-logo">
                 <img src="imagenes/logo.jpg" alt="">
             </div>
+<<<<<<< HEAD
             <nav>
                 <ul>
                     <li><a href="">Inicio</a></li>
@@ -41,6 +42,22 @@
             <a href=""><i class="fas fa-instagram" >Instagram</i></a>
             <p>Derechos reservados por Neonled-store</p>
         </footer>
+=======
+            <ul class="nav-list">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Quienes Somos</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="controller/LoginController.php?action=login"><i class="fas fa-user"></i></a></li>
+                <li><a href=""><i class="fas fa-cart-plus"></i></a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <header class="main-header">
+                <h1>NEON LED<br> STORE</h1>
+            </header>
+        </main>
+>>>>>>> 7a303a6f9fd76beb30f7e9bf0927003f00fee853
     </div>
 </body>
 

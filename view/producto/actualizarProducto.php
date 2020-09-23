@@ -52,13 +52,42 @@ foreach ($objProductoActual as $productoActual) {
                 <label class="label-form">Descripcion:</label>
                 <textarea name="descripcion" id="" cols="25" rows="4"><?php echo $productoActual->descripcion ?></textarea>
                 
-                <label class="label-form">Imagen:</label>
+                <label class="label-form">Imagen Principal:</label>
                 <input type="hidden" name="imagenUrlActual" value="<?php echo $productoActual->imagen ?>">
                 <input class="input-producto" type="file" name="imagen" id="" accept=".webp, .jpg , .png , .jpeg" multiple>
 
                 <div>
                     <img src="<?php echo $productoActual->imagen; ?>" width="100px" height="120px" />
-                </div> 
+                </div>
+
+                <!--Imagen Secundaria 1-->
+                <label class="label-form">Imagen Secundaria 1:</label>
+                <input type="hidden" name="imagen1UrlActual" value="<?php echo $productoActual->imagen1 ?>">
+                <input class="input-producto" type="file" name="imagen1" id="" accept=".webp, .jpg , .png , .jpeg" multiple>
+
+                <div>
+                    <img src="<?php echo $productoActual->imagen1; ?>" width="100px" height="120px" />
+                </div>
+
+                <!--Imagen Secundaria 2-->
+                <label class="label-form">Imagen Secundaria 2:</label>
+                <input type="hidden" name="imagen2UrlActual" value="<?php echo $productoActual->imagen2 ?>">
+                <input class="input-producto" type="file" name="imagen2" id="" accept=".webp, .jpg , .png , .jpeg" multiple>
+
+                <div>
+                    <img src="<?php echo $productoActual->imagen2; ?>" width="100px" height="120px" />
+                </div>
+
+                <!--Imagen Secundaria 3-->
+                <label class="label-form">Imagen Secundaria 3:</label>
+                <input type="hidden" name="imagen3UrlActual" value="<?php echo $productoActual->imagen3 ?>">
+                <input class="input-producto" type="file" name="imagen3" id="" accept=".webp, .jpg , .png , .jpeg" multiple>
+
+                <div>
+                    <img src="<?php echo $productoActual->imagen3; ?>" width="100px" height="120px" />
+                </div>
+                
+                
 
                 <input class="btn-guardar" type="submit" value="Guardar producto">
 

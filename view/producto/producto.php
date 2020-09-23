@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="../css/admin.css">
     <title>Administracion </title>
 </head>
-
 <body>
-
     <div class="contenedor">
         
         <div class="titulo">
@@ -43,15 +41,20 @@
                 </select>
                 <label class="label-form" >Descripcion:</label>
                 <textarea name="descripcion" id="" cols="25" rows="4"></textarea>
-                <label class="label-form" >Imagen:</label>
+                <label class="label-form" >Imagen Principal:</label>
                 <input class="input-producto"  type="file" name="imagen" id="" accept=".webp , .jpg, .png" multiple >
 
-                <input class="btn-guardar" type="submit" value="Guardar producto" >
+                <label class="label-form" >Imagen Secundaria 1:</label>
+                <input class="input-producto"  type="file" name="imagen1" id="" accept=".webp , .jpg, .png" multiple >
 
+                <label class="label-form" >Imagen Secundaria 2:</label>
+                <input class="input-producto"  type="file" name="imagen2" id="" accept=".webp , .jpg, .png" multiple >
+
+                <label class="label-form" >Imagen Secundaria 3:</label>
+                <input class="input-producto"  type="file" name="imagen3" id="" accept=".webp , .jpg, .png" multiple >
+                <input class="btn-guardar" type="submit" value="Guardar producto" >
             </form>
         </div>
-
     </div>
 </body>
-
 </html>
