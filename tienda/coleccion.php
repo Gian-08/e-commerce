@@ -22,22 +22,33 @@
         </header>
         <section class="cards">
             <?php foreach ($objProducto as $producto) { ?>
+                
                 <div class="card">
                     <input type="hidden" value="<?php $producto->IdProducto; ?>">
                     <div class="card-img">
-                        <img src="<?php echo $producto->imagen; ?>" alt="">
+                        <img src="<?php echo $producto->imagen; ?>" alt="" name="imagen">
                     </div>
                     <div class="card-body">
                         <div class="card-body-content">
+                            
                             <span><?php echo $producto->nombre ?></span>
+
+                            
                             <h3><?php echo $producto->categoria ?></h3>
+
+                            
                             <strong><?php echo "s/." . $producto->precio ?>.00 soles</strong>
                         </div>
                     </div>
+                    
                 </div>
+        
+                
             <?php } ?>
         </section>
     </div>
+
+    
 
     <div class="screen-modal">
         <?php foreach ($objProducto as $producto) { ?>
@@ -46,12 +57,16 @@
                     <img src="<?php echo $producto->imagen; ?>" alt="">
                 </div>
                 <div class="modal-head">
-                    <form class="form" id="compraForm" action="">
+                    <form class="form" id="compraForm" action="../enviar.php" method="POST">
+
+                        <input type="hidden" name="categoria" value="<?php echo $producto->categoria ?>">
                         <span><?php echo strtoupper($producto->categoria) ?></span>
 
                         <a href="#">
+                            <input type="hidden" name="nombre" value="<?php echo $producto->nombre ?>">
                             <h3><?php echo $producto->nombre ?></h3>
                         </a>
+                        <input type="hidden" name="precio" value="<?php echo "s/." . $producto->precio ?>.00 soles">
                         <strong><?php echo "s/." . $producto->precio ?>.00 soles</strong>
                         <hr>
                         <div class="form-group">
