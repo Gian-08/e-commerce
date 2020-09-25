@@ -4,9 +4,10 @@ $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
 $precio = $_POST['precio'];
 $cantidad = $_POST['cantidad'];
+$total = $_POST['total'];
 
 
-$body = "Producto: " . $nombre . "<br>Categoria: " . $categoria . "<br>Precio: " . $precio . "<br>Catidad: ". $cantidad;
+$body = "Producto: " . $nombre . "<br>Categoria: " . $categoria . "<br>Precio Unitario: " . $precio . "<br>Catidad: ". $cantidad . "<br>Precio Total: s/." . $total.".00";
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -25,7 +26,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                      
     $mail->SMTPAuth   = true;                                   
     $mail->Username   = 'crk.test11@gmail.com';                 
-    $mail->Password   = 'clave';                               
+    $mail->Password   = 'Beautiful007041032';                               
     $mail->SMTPSecure = 'tls';         
     $mail->Port       = 587;                                    
 
@@ -36,7 +37,7 @@ try {
    
 
     // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(true);                                  
     $mail->Subject = 'Prueba 2';
     $mail->Body    =  $body;
     $mail->SMTPOptions = array(

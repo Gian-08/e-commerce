@@ -22,7 +22,7 @@
         </header>
         <section class="cards">
             <?php foreach ($objProducto as $producto) { ?>
-                
+
                 <div class="card">
                     <input type="hidden" value="<?php $producto->IdProducto; ?>">
                     <div class="card-img">
@@ -30,25 +30,25 @@
                     </div>
                     <div class="card-body">
                         <div class="card-body-content">
-                            
+
                             <span><?php echo $producto->nombre ?></span>
 
-                            
+
                             <h3><?php echo $producto->categoria ?></h3>
 
-                            
+
                             <strong><?php echo "s/." . $producto->precio ?>.00 soles</strong>
                         </div>
                     </div>
-                    
+
                 </div>
-        
-                
+
+
             <?php } ?>
         </section>
     </div>
 
-    
+
 
     <div class="screen-modal">
         <?php foreach ($objProducto as $producto) { ?>
@@ -66,15 +66,18 @@
                             <input type="hidden" name="nombre" value="<?php echo $producto->nombre ?>">
                             <h3><?php echo $producto->nombre ?></h3>
                         </a>
-                        <input type="hidden" name="precio" value="<?php echo "s/." . $producto->precio ?>.00 soles">
+                        <input type="hidden" name="precio" value="<?php echo "s/." . $producto->precio ?>.00 soles" >
                         <strong><?php echo "s/." . $producto->precio ?>.00 soles</strong>
                         <hr>
                         <div class="form-group">
                             <label for="cantidad">Cantidad</label>
-                            <input type="number" name="cantidad" max="10">
+                            <input type="hidden" name="cantidad" value="<?php echo $producto->precio ?>"  id="multiplicador">
+                            <input type="number" name="cantidad" value="1" min="1" max="10" id="multiplicando">
+    
+                            <input type="hidden" name="total"  id="resultado">
                         </div>
                         <div class="form-group">
-                            <button class="button" type="submit">AÑADIR AL CARRITO</button>
+                            <button class="button" type="submit" onclick="multiplicar()">AÑADIR AL CARRITO</button>
                         </div>
                         <hr>
                         <p><?php echo $producto->descripcion ?></p>
@@ -105,12 +108,22 @@
                             </tr>
                         </tbody>
                     </table>
-                     <a href="#">VISITE LA PÁGINA DEL PRODUCTO</a>
+                    <a href="#">VISITE LA PÁGINA DEL PRODUCTO</a>
                 </div>
             </div>
         <?php } ?>
     </div>
     </div>
+
+    <script type="text/javascript">
+        function multiplicar() {
+            m1 = document.getElementById("multiplicando").value;
+            m2 = document.getElementById("multiplicador").value;
+            r = m1 * m2;
+            document.getElementById("resultado").value = r;
+        }
+    </script>
+
 </body>
 
 </html>
