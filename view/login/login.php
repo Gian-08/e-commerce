@@ -26,8 +26,7 @@
                         <input class="input-login" type="password" name="password">
                     </div>
                     <div class="form-group">
-                        <p>No tienes una cuenta? </p>
-                        <a href="http://localhost/e-commerce/controller/LoginController.php?action=registrar">Registrate ahora!</a>
+                        
                     </div>
                     <div class="form-group">
                         <input class="btn-ingresar" type="submit" value="Ingresar">

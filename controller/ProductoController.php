@@ -44,11 +44,11 @@
             $this->RedireccionarVistaProducto();
         }
 
-        public function ListaProductos()
+        /* public function ListaProductos()
         {
             $objProducto = $this->BuscarProductos();
             require '../tienda/coleccion.php';
-        }
+        } */
 
         public function MostrarProductoActual($IdProducto)
         {
@@ -69,10 +69,10 @@
         }
     }
 
-    if(isset($_GET['action']) && $_GET['action']=='vista'){
+    /* if(isset($_GET['action']) && $_GET['action']=='vista'){
         $instanciaProducto = new ProductoController();
         $instanciaProducto->ListaProductos();
-    }
+    } */
 
     //Insertar
     if(isset($_GET['action']) && $_GET['action']=='insertar'){

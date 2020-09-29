@@ -17,7 +17,7 @@
             </div>
             <ul class="nav-list">
                 <li><a href="">Inicio</a></li>
-                <li><a href="">Productos</a></li>
+                <li><a href="http://localhost/e-commerce/controller/ListaProductoController.php?action=vista">Productos</a></li>
                 <li><a href="">Quienes Somos</a></li>
                 <li><a href="">Contacto</a></li>
                 <li><a href="controller/LoginController.php?action=login"><i class="fas fa-user"></i></a></li>

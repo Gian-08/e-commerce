@@ -8,7 +8,67 @@
     <title>Administracion </title>
 </head>
 
+<style>
+    header {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* NAV BAR */
+#nav_bar {
+  float: right;
+}
+
+#nav_bar li {
+  display: inline-block;
+  padding: 8px;
+}
+
+#nav_bar #logout {
+  background: #4887ef; 
+  margin-right: 25px;
+  padding: 7px 15px;
+  border-radius: 3px; 
+  font-weight: bold;
+}
+
+.nav-links {
+  color: #404040;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li.nav-links a:hover {
+  text-decoration: underline;
+}
+
+#logout:hover { 
+  box-shadow: 1px 1px 5px #999;
+}
+
+#logout {
+  color: #fff;
+}
+</style>
+
 <body>
+    <header>
+        <nav>
+            <ul id="nav_bar">
+            <?php if (!empty($_SESSION['email'])) : ?>
+                <li class="nav-links" id="gmail"><a href="#">Inicio</a></li>
+                <li class="nav-links"><a href="#">Lista De Productos</a></li>
+                <li id="logout"><a href="http://localhost/e-commerce/controller/LoginController.php?action=logout">Cerrar Sesion</a></li>
+                <?php endif ?>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <header class="header">
             <h1>Zona de registro de productos</h1>
@@ -56,11 +116,11 @@
                     <label for="imagen">Imagen Principal:</label>
                     <input class="input-producto" type="file" name="imagen" id="" accept=".webp , .jpg, .png" multiple>
                 </div>
-                <div class="form-row"> 
+                <div class="form-row">
                     <label for="imagen1">Imagen Secundaria 1:</label>
                     <input class="input-producto" type="file" name="imagen1" id="" accept=".webp , .jpg, .png" multiple>
                 </div>
-                <div class="form-row"> 
+                <div class="form-row">
                     <label for="imagen2">Imagen Secundaria 2:</label>
                     <input class="input-producto" type="file" name="imagen2" id="" accept=".webp , .jpg, .png" multiple>
                 </div>

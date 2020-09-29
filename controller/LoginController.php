@@ -27,7 +27,7 @@ class LoginController extends LoginModel {
 
     public function RedireccionarProductos()
     {
-        header("Location: http://localhost/e-commerce/controller/ProductoController.php?action=vista");
+        header("Location: http://localhost/e-commerce/controller/ProductoController.php?action=insertar");
     }
 
     public function GuardarUsuarioModel($nombre, $email, $password)
