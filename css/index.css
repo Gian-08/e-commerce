@@ -1,115 +1,199 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
+:root {
+    --rojo: #fc5c65;
+    --gris-claro: #f1f1f1;
+    --negro: #00080a;
+    --verde: #32e0c4;
+}
+
 body {
-  height: 100%;
+    height: 100%;
 }
+
 .contenedor {
-  width: 100%;
+    width: 100%;
 }
+
 .nav {
-  height: 18vh;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(22, 22, 22);
-  align-items: center;
+    height: 19vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(22, 22, 22);
+    align-items: center;
 }
+
 .nav-logo {
-  flex-basis: 30%;
-  text-align: center;
+    flex-basis: 30%;
+    text-align: center;
 }
+
 .nav-logo img {
-  width: 150px;
+    width: 150px;
 }
+
 .nav-list {
-  flex-basis: 70%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  list-style: none;
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
 }
+
 .nav-list li {
-  animation-name: bordesNav;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    animation-name: bordesNav;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
 .nav-list li:hover {
-  border: 2px solid white;
-  box-shadow: 2px 2px 15px gray;
-  animation: none;
+    border: 2px solid white;
+    box-shadow: 2px 2px 15px gray;
+    animation: none;
 }
+
 .nav-list li a {
-  padding: 10px 20px;
-  color: white;
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-size: 18px;
-  text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 @keyframes bordesNav {
-  0% {
-    border-left: 2px solid white;
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-  }
-  25% {
-    border-left: 2px solid transparent;
-    border-top: 2px solid white;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-  }
-  50% {
-    border-left: 2px solid transparent;
-    border-top: 2px solid transparent;
-    border-right: 2px solid white;
-    border-bottom: 2px solid transparent;
-  }
-  75% {
-    border-left: 2px solid transparent;
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid white;
-  }
-  100% {
-    border-left: 2px solid white;
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-  }
+    0% {
+        border-left: 2px solid white;
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+    }
+    25% {
+        border-left: 2px solid transparent;
+        border-top: 2px solid white;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+    }
+    50% {
+        border-left: 2px solid transparent;
+        border-top: 2px solid transparent;
+        border-right: 2px solid white;
+        border-bottom: 2px solid transparent;
+    }
+    75% {
+        border-left: 2px solid transparent;
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid white;
+    }
+    100% {
+        border-left: 2px solid white;
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+    }
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    color: var(--gris-claro);
+    background-color: var(--negro);
+    padding: 20px;
+    min-height: 400px;
+    opacity: 1;
+    min-width: 300px;
+    border-radius: 7px;
+}
+
+button {
+    height: 38px;
+    padding: 0 30px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: var(--rojo);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f56a70;
+}
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+}
+
+table {
+    margin-bottom: 2.5rem;
 }
 
 .main {
-  height: 82vh;
-  display: flex;
-  align-items: center;
-  background-image: linear-gradient(
-      98deg,
-      rgba(22, 22, 22, 0.7) 37%,
-      rgba(22, 22, 22, 0.6) 79%
-    ),
-    url("../imagenes/logo.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient( 98deg, rgba(22, 22, 22, 0.7) 37%, rgba(22, 22, 22, 0.6) 79%), url("../imagenes/logo.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
 }
+
 .main-header {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
+
 .main-header h1 {
-  color: black;
-  font-size: 160px;
-  line-height: 0.9;
-  -webkit-text-stroke: 2px #dbb576;
+    color: black;
+    font-size: 160px;
+    line-height: 0.9;
+    -webkit-text-stroke: 2px #dbb576;
 }
+
 .main-header h1::first-line {
-  -webkit-text-stroke: 2px #26a2bc;
+    -webkit-text-stroke: 2px #26a2bc;
 }

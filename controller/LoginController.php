@@ -12,7 +12,7 @@ class LoginController extends LoginModel {
 
     public function RegistroView()
     {
-       require '../view/login/register.php';
+        require '../view/login/register.php';
     }
 
     public function RedireccionarIndex()
@@ -74,12 +74,7 @@ if(isset($_GET['action']) && $_GET['action']=='registrar'){
 
 if(isset($_POST['action']) && $_POST['action']=='insertar'){
     $instanciaController = new LoginController();
-    $password = $_POST['password'];
-    $instanciaController->GuardarUsuarioModel(
-        $_POST['nombre'],
-        $_POST['email'],
-        $password,
-    );
+    $instanciaController->GuardarUsuarioModel($_POST['nombre'],$_POST['email'],$_POST['password']);
 }
 
 if(isset($_POST['action']) && $_POST['action']=='login'){
